@@ -9,4 +9,6 @@ To clone:
 
 Linker Man.txt - Capture of the "ld man" command line output.
 
+Strip Man.txt - Capture of the "strip man" command line output.
+
 Swift Help.txt - Capture of the 'swift -help" command line output.
