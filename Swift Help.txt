@@ -1,0 +1,149 @@
+$ swift -help
+
+OVERVIEW: Swift compiler
+
+USAGE: swift
+
+OPTIONS:
+  -assert-config <value>  Specify the assert_configuration replacement. Possible values are Debug, Release, Unchecked, DisableReplacement.
+  -color-diagnostics      Print diagnostics in color
+  -continue-building-after-errors
+                          Continue building, even after errors are encountered
+  -coverage-prefix-map <prefix=replacement>
+                          Remap source paths in coverage info
+  -debug-info-format=<value>
+                          Specify the debug info format type to either 'dwarf' or 'codeview'
+  -debug-info-store-invocation
+                          Emit the compiler invocation in the debug info.
+  -debug-prefix-map <prefix=replacement>
+                          Remap source paths in debug info
+  -diagnostic-style <style>
+                          The formatting style used when printing diagnostics ('swift' or 'llvm')
+  -disable-autolinking-runtime-compatibility-dynamic-replacements
+                          Do not use autolinking for the dynamic replacement runtime compatibility library
+  -disable-autolinking-runtime-compatibility
+                          Do not use autolinking for runtime compatibility libraries
+  -disable-fuzzy-forward-scan-trailing-closure-matching
+                          Disable fuzzy forward-scan trailing closure matching
+  -disable-only-one-dependency-file
+                          Disables incremental build optimization that only produces one dependencies file
+  -disable-request-based-incremental-dependencies
+                          Disable request-based name tracking
+  -disallow-use-new-driver
+                          Disable using new swift-driver
+  -driver-compare-incremental-schemes-path <path>
+                          Path to use for machine-readable comparison
+  -driver-compare-incremental-schemes
+                          Print a simple message comparing dependencies with source ranges (w/ fallback)
+  -D <value>              Marks a conditional compilation flag as true
+  -embed-tbd-for-module <value>
+                          Embed symbols from the module in the emitted tbd file
+  -enable-experimental-additive-arithmetic-derivation
+                          Enable experimental 'AdditiveArithmetic' derived conformances
+  -enable-experimental-concise-pound-file
+                          Enable experimental concise '#file' identifier
+  -enable-experimental-cross-module-incremental-build
+                          (experimental) Enable cross-module incremental build metadata and driver scheduling
+  -enable-experimental-cxx-interop
+                          Allow importing C++ modules into Swift (experimental feature)
+  -enable-experimental-forward-mode-differentiation
+                          Enable experimental forward mode differentiation
+  -enable-fuzzy-forward-scan-trailing-closure-matching
+                          Enable fuzzy forward-scan trailing closure matching
+  -enable-library-evolution
+                          Build the module to allow binary-compatible library evolution
+  -enable-only-one-dependency-file
+                          Enables incremental build optimization that only produces one dependencies file
+  -enable-request-based-incremental-dependencies
+                          Enable request-based name tracking
+  -enable-source-range-dependencies
+                          Try using source range information
+  -enforce-exclusivity=<enforcement>
+                          Enforce law of exclusivity
+  -experimental-cxx-stdlib <value>
+                          C++ standard library to use; forwarded to Clang's -stdlib flag
+  -framework <value>      Specifies a framework which should be linked against
+  -Fsystem <value>        Add directory to system framework search path
+  -F <value>              Add directory to framework search path
+  -gdwarf-types           Emit full DWARF type info.
+  -gline-tables-only      Emit minimal debug info for backtraces only
+  -gnone                  Don't emit debug info
+  -g                      Emit debug info. This is the preferred setting for debugging with LLDB.
+  -help                   Display available options
+  -index-store-path <path>
+                          Store indexing data to <path>
+  -I <value>              Add directory to the import search path
+  -j <n>                  Number of commands to execute in parallel
+  -libc <value>           libc runtime library to use
+  -locale <locale-code>   Choose a language for diagnostic messages
+  -localization-path <path>
+                          Path to localized diagnostic messages directory
+  -L <value>              Add directory to library link search path
+  -l<value>               Specifies a library which should be linked against
+  -module-cache-path <value>
+                          Specifies the Clang module cache path
+  -module-link-name <value>
+                          Library to link against when using this module
+  -module-name <value>    Name of the module to build
+  -no-color-diagnostics   Do not print diagnostics in color
+  -no-warnings-as-errors  Don't treat warnings as errors
+  -nostdimport            Don't search the standard library import path for modules
+  -num-threads <n>        Enable multi-threading and specify number of threads
+  -Onone                  Compile without any optimization
+  -Osize                  Compile with optimizations and target small code size
+  -Ounchecked             Compile with optimizations and remove runtime safety checks
+  -O                      Compile with optimizations
+  -pretty-print           Pretty-print the output JSON
+  -print-educational-notes
+                          Include educational notes in printed diagnostic output, if available
+  -print-target-info      Print target information for the given target <triple>, such as x86_64-apple-macos10.9
+  -Rcross-import          Emit a remark if a cross-import of a module is triggered.
+  -remove-runtime-asserts Remove runtime safety checks.
+  -Rmodule-loading        Emit a remark and file path of each loaded module
+  -Rpass-missed=<value>   Report missed transformations by optimization passes whose name matches the given POSIX regular expression
+  -Rpass=<value>          Report performed transformations by optimization passes whose name matches the given POSIX regular expression
+  -runtime-compatibility-version <value>
+                          Link compatibility library for Swift runtime version, or 'none'
+  -save-optimization-record-passes <regex>
+                          Only include passes which match a specified regular expression inthe generated optimization record (by default, include all passes)
+  -save-optimization-record-path <value>
+                          Specify the file name of any generated optimization record
+  -save-optimization-record=<format>
+                          Generate an optimization record file in a specific format (default: YAML)
+  -save-optimization-record
+                          Generate a YAML optimization record file
+  -sdk <sdk>              Compile against <sdk>
+  -serialize-diagnostics-path <path>
+                          Emit a serialized diagnostics file to <path>
+  -static-executable      Statically link the executable
+  -static-stdlib          Statically link the Swift standard library
+  -suppress-warnings      Suppress all warnings
+  -swift-isa-ptrauth-mode <mode>
+                          Mode for staging isa/super signing. Supported modes are LegacyAndStrip, NewAndStrip and NewAndAuth.
+  -swift-ptrauth-mode <mode>
+                          Mode for staging pointer authentication. Supported modes are LegacyAndStrip, NewAndStrip and NewAndAuth.
+  -swift-version <vers>   Interpret input according to a specific Swift language version number
+  -target-cpu <value>     Generate code for a particular CPU variant
+  -target-variant <value> Generate 'zippered' code for macCatalyst that can run on the specified variant target triple in addition to the main -target triple
+  -target <triple>        Generate code for the given target <triple>, such as x86_64-apple-macos10.9
+  -use-ld=<value>         Specifies the linker to be used
+  -version                Print version information and exit
+  -vfsoverlay <value>     Add directory to VFS overlay file
+  -v                      Show commands to run and use verbose output
+  -warn-implicit-overrides
+                          Warn about implicit overrides of protocol members
+  -warn-swift3-objc-inference-complete
+                          Warn about deprecated @objc inference in Swift 3 for every declaration that will no longer be inferred as @objc in Swift 4
+  -warn-swift3-objc-inference-minimal
+                          Warn about deprecated @objc inference in Swift 3 based on direct uses of the Objective-C entrypoint
+  -warnings-as-errors     Treat warnings as errors
+  -working-directory <path>
+                          Resolve file paths relative to the specified directory
+  -Xcc <arg>              Pass <arg> to the C/C++/Objective-C compiler
+  -Xlinker <value>        Specifies an option which should be passed to the linker
+
+SEE ALSO - PACKAGE MANAGER COMMANDS: 
+	"swift build" Build sources into binary products 
+	"swift package" Perform operations on Swift packages 
+	"swift run" Build and run an executable product 
+	"swift test" Build and run tests 
